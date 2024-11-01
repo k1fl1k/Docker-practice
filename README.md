@@ -62,13 +62,3 @@ This is a simple Node.js application that demonstrates the use of Docker for con
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-### Instructions to Create the README
-
-1. Create a file named `README.md` in the root of your project directory.
-2. Copy and paste the above content into the file.
-3. Replace `<repository-url>` and `<repository-directory>` with your actual repository URL and directory name, respectively.
-
-### Final Touches
-
-Feel free to modify the sections according to your project specifics, especially if you have additional features or configuration details. A well-structured `README.md` helps users understand how to use your project effectively. Let me know if you need any changes!
