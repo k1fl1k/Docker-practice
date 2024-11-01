@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #ports:
+     # - "3000:3000" # Expose Node.js app port
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80" # Expose Nginx on port 80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf # Mount Nginx configuration file
+      - ./html:/usr/share/nginx/html 
+      - ./static:/usr/share/nginx/static
+    depends_on:
+      - app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
